@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Living Essence</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .header .col-2 img {
+            max-width: 100%;
+            height: auto;
+            padding: 5px;  /* Reduced from 10px */
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .header .row {
+            align-items: center;
+            padding: 10px 0;  /* Reduced from 15px */
+            margin-bottom: 10px; /* Reduced from 20px */
+        }
+
+        .benefits-bar {
+            margin-top: 0;
+            padding-top: 10px; /* Reduced from 20px */
+        }
+
+        /* Latest Products Minimalist Styles */
+        .latest-products {
+            padding: 2rem 0;
+            background: #ffffff;
+        }
+
+        .latest-products .title {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            color: #333;
+            text-align: left;
+        }
+
+        .latest-products .col-4 {
+            background: #fff;
+            padding: 1rem;
+            transition: all 0.3s ease;
+            border: 1px solid #f5f5f5;
+        }
+
+        .latest-products .col-4:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .latest-products img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .latest-products h4 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #2c2c2c;
+            margin: 0.5rem 0;
+        }
+
+        .latest-products .rating {
+            color: #ffd700;
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .latest-products p {
+            font-size: 1.1rem;
+            color: #e44d26;
+            font-weight: 600;
+        }
+
+        .latest-products .row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="Icons/Living Essence Icon.png" width="180px" alt="Living Essence Logo">
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Search products...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <div class="cart-container">
+                    <a href="cart.html">
+                        <img src="Icons/Shoppingcarticon.png" width="30px" height="30px" alt="Shopping Cart">
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                <img src="Icons/menu icon.png" class="menu-icon" onclick="toggleMenu()" alt="Menu">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h1>Bringing Essence to<br>Every Home!</h1>
+                <p>Transform your space into a sanctuary with thoughtfully crafted furniture that blends style, comfort, and timeless elegance.</p>
+                <div class="cta-buttons">
+                    <a href="#featured-products" class="btn primary">Explore Now &#8594;</a>
+                    <a href="products.html" class="btn secondary">View Catalog</a>
+                </div>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fa fa-truck"></i>
+                        <span>Free Delivery</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fa fa-shield"></i>
+                        <span>Quality Guarantee</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <img src="https://i.pinimg.com/736x/7e/8a/f6/7e8af6292af41ffe68b45a6e08be20d7.jpg">    
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits Bar -->
+    <div class="benefits-bar">
+        <div class="container">
+            <div class="benefit-item">
+                <i class="fa fa-truck"></i>
+                <div class="benefit-text">
+                    <h4>Free Shipping</h4>
+                    <p>On orders over ₱50,000</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <i class="fa fa-certificate"></i>
+                <div class="benefit-text">
+                    <h4>Premium Quality</h4>
+                    <p>100% Quality Guarantee</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <i class="fa fa-clock-o"></i>
+                <div class="benefit-text">
+                    <h4>24/7 Support</h4>
+                    <p>Dedicated customer service</p>
+                </div>
+            </div>
+            <div class="benefit-item">
+                <i class="fa fa-refresh"></i>
+                <div class="benefit-text">
+                    <h4>Easy Returns</h4>
+                    <p>30-day return policy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Showcase -->
+    <div class="category-showcase">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://i.pinimg.com/736x/2b/76/cc/2b76cc89c6c9553288e83f48495a5357.jpg" alt="Living Room">
+                    <div class="category-content">
+                        <h3>Living Room</h3>
+                        <a href="products.html?category=living-room" class="btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://i.pinimg.com/736x/83/36/17/83361707a4b0bb83f887f93ac0964ef3.jpg" alt="Bedroom">
+                    <div class="category-content">
+                        <h3>Bedroom</h3>
+                        <a href="products.html?category=bedroom" class="btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://i.pinimg.com/736x/66/5d/b7/665db7207104f2e4f16b1ac0f2ccd570.jpg" alt="Dining">
+                    <div class="category-content">
+                        <h3>Dining</h3>
+                        <a href="products.html?category=dining" class="btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-----Featured Products----->
+        <div class="small-container">
+            <h2 class="title" id="featured-products">Featured Products</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="Featured Products/featured 1.jpg">
+                    <h4>Armchairs</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>₱6000.00</p>
+                    <div class="quick-view">
+                        <a href="products.html?category=dining" class="btn">Quick View</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="Featured Products/featured 3.png">
+                    <h4>Organic Products</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>₱7000.00</p>
+                    <div class="quick-view">
+                        <a href="products.html?category=dining" class="btn">Quick View</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="Featured Products/featured 2.jpg">
+                    <h4>Table Lamps</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>₱8000.00</p>
+                    <div class="quick-view">
+                        <a href="products.html?category=dining" class="btn">Quick View</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="Featured Products/featured 4.jpg">
+                    <h4>Side Tables</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p>₱6000.00</p>
+                   <div class="quick-view">
+                        <a href="products.html?category=dining" class="btn">Quick View</a>
+                    </div>
+                </div>
+            </div>
+            <h2 class="title">Latest Products</h2>
+            <div class="latest-products">
+                <div class="small-container">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="Latest Products/latest 1.jpg">
+                            <h4>Organic Oval Wood Mirror</h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <p>₱6000.00</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="Latest Products/latest 2.jpg">
+                            <h4>Tripod Standing Floor Lamp</h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>₱7000.00</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="Latest Products/latest 3.jpg">
+                            <h4>Mid-Century Vinyl Record</h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>₱8000.00</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="Latest Products/latest 4.jpg">
+                            <h4>Contemporary Open Shelf</h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div>
+                            <p>₱6000.00</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="Latest Products/latest 5.jpg">
+                            <h4>Rattan Mushroom Table Lamp</h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <p>₱6000.00</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="Latest Products/latest 6.jpg">
+                            <h4>Musician's Corner Display</h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>₱7000.00</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="Latest Products/latest 7.jpg">
+                            <h4>Modern Metal & Wood Bookshelf</h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>₱8000.00</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="Latest Products/latest 8.jpg">
+                            <h4>Modern Wall Mirror Nightstand</h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div>
+                            <p>₱6000.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-----BEST OFFER----->
+        <div class="offer">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="https://i.pinimg.com/736x/6a/69/dd/6a69ddd6ee27dc470c25b0300f4deaea.jpg" class="offer-img">
+                    </div>
+                    <div class="col-2">
+                        <p>Exclusively Available on Living Essence</p>
+                        <h1>Aesthetic minimalist set</h1>
+                        <div class="exclusive-details">
+                            <div class="exclusive-description">
+                                <small>Effortless elegance meets modern minimalism. This curated collection features neutral-toned seating, textured cushions, and sleek accent pieces, perfect for creating a warm and inviting outdoor or indoor space. The combination of natural wood, woven textures, and concrete elements brings a balance of comfort and contemporary sophistication.</small>
+                            </div>
+                            <div class="exclusive-price">
+                                <p class="price">₱85,000.00</p>
+                                <p class="availability">Limited Stock Available</p>
+                            </div>
+                            <div class="exclusive-actions">
+                                <button onclick="addExclusiveToCart()" class="btn exclusive-add">Add to Cart</button>
+                                <button onclick="buyNowExclusive()" class="btn exclusive-buy">Buy Now &#8594;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-----Testimonial----->
+    <div class="testimonial">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>The fire pit and candleholder elements add warmth and ambiance, making the setup feel inviting and balanced. The contrast between the sleek black elements and the natural wood frames gives it a sophisticated yet grounded look. Overall, it’s a stunning combination of cozy and contemporary—ideal for creating a stylish and serene lounging area.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <h3>Khen Calma</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>This layout is a masterclass in effortless outdoor elegance. The blend of natural wood, soft textiles, and matte black accents creates a space that feels both inviting and elevated. Every piece complements the next—from the structured yet cozy seating to the grounding textures of the rug and concrete table.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <h3>Markdavid Mitra</h3>
+                </div>
+                <div class="col-3">
+                    <i class="fa fa-quote-left"></i>
+                    <p>This mood board beautifully captures a modern rustic aesthetic with a minimalist twist. The neutral color palette—anchored by soft beiges, light wood tones, and charcoal accents—creates a calming, earthy vibe perfect for indoor-outdoor living spaces. The mix of textures, like the woven rug, soft linen cushions, and the concrete-inspired surfaces, adds depth and tactile interest.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <h3>Lance Diaz</h3>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+        <!-----Brands----->
+        <div class="brands">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-5">
+                        <img src="https://i.pinimg.com/736x/35/fb/4d/35fb4dc1356deb660dccd46b623ce583.jpg">
+                    </div>
+                    <div class="col-5">
+                        <img src="https://i.pinimg.com/736x/8f/f7/83/8ff78354692268f708a339f187bc90cc.jpg">
+                    </div>
+                    <div class="col-5">
+                        <img src="https://i.pinimg.com/736x/50/9f/bc/509fbc93c9d63ab71bc84e006d08e91f.jpg">
+                    </div>
+                    <div class="col-5">
+                        <img src="https://i.pinimg.com/736x/20/bc/32/20bc32ed2b130d0a2c2e0be879662f99.jpg">
+                    </div>
+                    <div class="col-5">
+                        <img src="https://i.pinimg.com/736x/14/55/09/145509e2e7c55b7ab8830545895b70c9.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-----Newsletter----->
+    <div class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest updates on new products and upcoming sales</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address">
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-----Footer----->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Available on App Store and Google Play</p>
+                        <div class="app-logo">
+                            <img src="https://mandauefoam.ph/cdn/shop/files/App_Store_x400@2x.png?v=1742997278">
+                            <img src="https://mandauefoam.ph/cdn/shop/files/Play_Store_x400@2x.png?v=1742997272">
+                        </div>
+                    </div>
+                    <div class="footer-col-2">
+                        <img src="Icons/living essence icon.png">
+                        <p>Living Essence brings comfort and style to your space with timeless, high-quality furniture. Shop effortlessly and transform your home with pieces that reflect your true essence.</p>
+                    </div>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affiliate</li>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Youtube</li>
+                        </ul>    
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright 2025 - Living Essence</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/cart.js"></script>
+</body>    
+</html>

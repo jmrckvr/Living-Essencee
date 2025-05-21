@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products - Living Essence</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="Icons/Living Essence Icon.png" width="180px" alt="Living Essence Logo">
+                </div>
+                <div class="search-container">
+                    <input type="text" placeholder="Search products...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html" class="active">Products</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <div class="cart-container">
+                    <a href="cart.html">
+                        <img src="Icons/Shoppingcarticon.png" width="30px" height="30px" alt="Shopping Cart">
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                <img src="Icons/menu icon.png" class="menu-icon" onclick="toggleMenu()" alt="Menu">
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-hero">
+        <h1>Our Product Categories</h1>
+        <p>Explore a wide range of product categories tailored to suit every style, space, and need.</p>
+    </div>
+
+    <div class="small-container">
+        <div class="products-grid">
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://i.pinimg.com/736x/ab/7c/1b/ab7c1b4846229e4ba5f92bed5f5d5e63.jpg" alt="Living Room">
+                </div>
+                <div class="category-content">
+                    <h3>Living Room</h3>
+                    <p>Sofas, Coffee Tables, TV Units</p>
+                    <button class="category-link" onclick="toggleCollection('living-room')">View Collection</button>
+                </div>
+            </div>
+            
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://i.pinimg.com/736x/e4/42/6e/e4426e79b294fadc6961bfad75172ff5.jpg" alt="Bedroom">
+                </div>
+                <div class="category-content">
+                    <h3>Bedroom</h3>
+                    <p>Beds, Wardrobes, Side Tables</p>
+                    <button class="category-link" onclick="toggleCollection('bedroom')">View Collection</button>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://i.pinimg.com/736x/c6/08/3d/c6083d50572dc7f04c803c0a5f918114.jpg" alt="Dining">
+                </div>
+                <div class="category-content">
+                    <h3>Dining</h3>
+                    <p>Dining Tables, Chairs, Buffets</p>
+                    <button class="category-link" onclick="toggleCollection('dining')">View Collection</button>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://i.pinimg.com/736x/ce/e8/b7/cee8b74151b29605a80e0f61898c249d.jpg" alt="Office">
+                </div>
+                <div class="category-content">
+                    <h3>Office</h3>
+                    <p>Desks, Office Chairs, Bookcases</p>
+                    <button class="category-link" onclick="toggleCollection('office')">View Collection</button>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://i.pinimg.com/736x/85/b5/e5/85b5e5417b9211fb740089f524a33aed.jpg" alt="Outdoor">
+                </div>
+                <div class="category-content">
+                    <h3>Outdoor</h3>
+                    <p>Garden Sets, Loungers, Planters</p>
+                    <button class="category-link" onclick="toggleCollection('outdoor')">View Collection</button>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="https://i.pinimg.com/736x/aa/c9/7f/aac97f54dc603a9783591de5bc6fe69b.jpg" alt="Kitchen">
+                </div>
+                <div class="category-content">
+                    <h3>Kitchen</h3>
+                    <p>Kitchen Islands, Bar Stools, Storage</p>
+                    <button class="category-link" onclick="toggleCollection('kitchen')">View Collection</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Move all collection-details here, outside products-grid -->
+        <div id="living-room" class="collection-details" style="display: none;">
+            <h2 class="title">Living Room Collection</h2>
+            <div class="collection-grid">
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/36/89/05/368905fb954807764de3be8e6c737ef3.jpg" alt="Modern Sofa">
+                    <h4>Modern L-Shape Sofa</h4>
+                    <p class="price">₱25,000.00</p>
+                    <p class="description">Contemporary design with premium fabric upholstery</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Modern L-Shape Sofa',
+                            'Contemporary design with premium fabric upholstery. Spacious seating, sturdy frame, and perfect for modern living rooms.',
+                            [
+                                'https://i.pinimg.com/736x/ed/03/81/ed03817ab13b780afb4c45fa9ceb93aa.jpg',
+                                'https://i.pinimg.com/736x/b4/34/fe/b434fe97d2059f861e1462c1d1969659.jpg',
+                                'https://i.pinimg.com/736x/fb/b9/d2/fbb9d2106ff7ea4df2e55453f3b71d33.jpg',
+                                'https://i.pinimg.com/736x/61/a8/8d/61a88d832f9070cd5db876df953b80f0.jpg'
+                            ],
+                            '₱25,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/5b/c8/64/5bc864c978d5f19c390a515742411cb3.jpg" alt="Coffee Table">
+                    <h4>Wooden Coffee Table</h4>
+                    <p class="price">₱8,500.00</p>
+                    <p class="description">Solid wood with natural finish</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Wooden Coffee Table',
+                            'Solid wood with natural finish. Perfect for any living room setup.',
+                            [
+                                'https://i.pinimg.com/736x/e7/00/28/e7002822415925cb5bdfaa29f742226f.jpg',  
+                                'https://i.pinimg.com/736x/8c/2b/68/8c2b68bc584613ec0b88ef4f7d8b4ddc.jpg',
+                                'https://i.pinimg.com/736x/41/55/f7/4155f7b3ca7173a734697d43e1ac06a4.jpg',
+                                'https://i.pinimg.com/736x/2e/3d/cb/2e3dcb90dfd6b3a60a8580ed81198289.jpg'
+                            ],
+                            '₱8,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/e1/79/a2/e179a288a2778e481b7cc247d32abf6a.jpg" alt="TV Unit">
+                    <h4>Modern TV Console</h4>
+                    <p class="price">₱15,000.00</p>
+                    <p class="description">Sleek entertainment unit with storage</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Modern TV Console',
+                            'Sleek entertainment unit with storage. Perfect for organizing your living room.',
+                            [
+                                'https://i.pinimg.com/736x/48/49/52/484952088f77e2710c290114824cb23d.jpg',
+                                'https://i.pinimg.com/736x/c7/f6/5c/c7f65c0c71eaa6b7ffe215a99589c17b.jpg',
+                                'https://i.pinimg.com/736x/72/59/9a/72599ae67f51d316a4b79789d2e8338a.jpg',
+                                'https://i.pinimg.com/736x/35/7e/62/357e620547caba0624fbd9b732df244a.jpg'
+                            ],
+                            '₱15,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/99/16/c3/9916c309f1df8bdc169605a511f95135.jpg" alt="Accent Chair">
+                    <h4>Accent Chair</h4>
+                    <p class="price">₱12,000.00</p>
+                    <p class="description">Comfortable lounger with premium fabric</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Accent Chair',
+                            'Comfortable lounger with premium fabric. Adds style and comfort to your living space.',
+                            [
+                                'https://i.pinimg.com/736x/95/a4/65/95a4658791337e24b9da8cd23e78f6d0.jpg',
+                                'https://i.pinimg.com/736x/4e/f5/95/4ef595f30bcdd58ad32e70cd072f556a.jpg',
+                                'https://i.pinimg.com/736x/d3/b9/bf/d3b9bf0ab638fbcd5ae4793d9fc8fc43.jpg',
+                                'https://i.pinimg.com/736x/5e/03/b9/5e03b9a0f816230084765ef59b0c1a81.jpg'
+                            ],
+                            '₱12,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/aa/e4/6e/aae46e12838a79b5b95a8523554459b4.jpg" alt="Side Table">
+                    <h4>Modern Side Table</h4>
+                    <p class="price">₱5,500.00</p>
+                    <p class="description">Contemporary side table with storage</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Modern Side Table',
+                            'Contemporary side table with storage. Compact and stylish.',
+                            [
+                                'https://i.pinimg.com/736x/0f/08/2e/0f082ed5fc69411996b60b0337a0bf30.jpg',
+                                'https://i.pinimg.com/736x/d8/7c/cd/d87ccd69dc06321f8436dc61bc5bc98e.jpg',
+                                'https://i.pinimg.com/736x/53/e3/58/53e3582685a1002eceab3236a2da3e6f.jpg',
+                                'https://i.pinimg.com/736x/15/c2/77/15c27776401c1b0f1c27f8913009fa96.jpg'
+                            ],
+                            '₱5,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/c2/fa/ad/c2faad3e1ee7ab8f392f7fee28f2fafa.jpg" alt="Ottoman">
+                    <h4>Storage Ottoman</h4>
+                    <p class="price">₱6,000.00</p>
+                    <p class="description">Multifunctional ottoman with storage</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Storage Ottoman',
+                            'Multifunctional ottoman with storage. Perfect for small spaces.',
+                            [
+                                'https://i.pinimg.com/736x/46/74/40/46744039afacb84876d2300904df4e47.jpg',
+                                'https://i.pinimg.com/736x/bd/1a/8b/bd1a8bc70fdb8796975b33f4aeaa6b8c.jpg',
+                                'https://i.pinimg.com/736x/17/cc/8f/17cc8f98a3822a8df8870a034a239f47.jpg',
+                                'https://i.pinimg.com/736x/c7/68/5b/c7685ba42e46f0add83d35b766a19a33.jpg'
+                            ],
+                            '₱6,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/24/5b/eb/245bebb15e233373fab0df66dcbce6a1.jpg" alt="Floor Lamp">
+                    <h4>Modern Floor Lamp</h4>
+                    <p class="price">₱4,500.00</p>
+                    <p class="description">Adjustable floor lamp with LED</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Modern Floor Lamp',
+                            'Adjustable floor lamp with LED. Adds ambiance to your living room.',
+                            [
+                                'https://i.pinimg.com/736x/93/eb/c7/93ebc722e9adff3ed57b2001975a77fc.jpg',
+                                'https://i.pinimg.com/736x/8d/2d/94/8d2d94e95e5e83c28f66eb63ae305380.jpg',
+                                'https://i.pinimg.com/736x/0c/67/62/0c67622ec5193409eee7d7dc26a940f3.jpg',
+                                'https://i.pinimg.com/736x/06/1c/08/061c0818f4d96f5dd171ab1bc983ee96.jpg'
+                            ],
+                            '₱4,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/da/a5/ed/daa5ed4c630784e1add75fc8c49af7e2.jpg" alt="Wall Unit">
+                    <h4>Wall Storage Unit</h4>
+                    <p class="price">₱18,000.00</p>
+                    <p class="description">Modern wall-mounted storage solution</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Wall Storage Unit',
+                            'Modern wall-mounted storage solution. Perfect for organizing your space.',
+                            [
+                                'https://i.pinimg.com/736x/36/12/a6/3612a66d520fee6a912adae988c78aef.jpg',
+                                'https://i.pinimg.com/736x/6d/04/58/6d04586f618672585ccc5f24bbdb3e28.jpg',
+                                'https://i.pinimg.com/736x/3c/b2/89/3cb289ccc4de7893d1f57d18fc07acb7.jpg',
+                                'https://i.pinimg.com/736x/b8/7d/81/b87d8184406304cfbac094c224dc78b0.jpg'
+                            ],
+                            '₱18,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/3e/f5/84/3ef5849c40d58bb00ea33f3ca55f0c7e.jpg" alt="Console Table">
+                    <h4>Console Table</h4>
+                    <p class="price">₱9,500.00</p>
+                    <p class="description">Elegant console table for entryway</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Console Table',
+                            'Elegant console table for entryway. Adds style and functionality.',
+                            [
+                                'https://i.pinimg.com/736x/b1/8d/8b/b18d8b12e52072f2529d020c0ab6dd7a.jpg',
+                                'https://i.pinimg.com/736x/b6/36/57/b63657a5eb7d0188df419978a0c8748c.jpg',
+                                'https://i.pinimg.com/736x/fa/dd/28/fadd28e8664fa5aa2c65702f07cf39f6.jpg',
+                                'https://i.pinimg.com/736x/2c/ed/0b/2ced0b55054994e4b1fcecbc38bed4c3.jpg'
+                            ],
+                            '₱9,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div id="bedroom" class="collection-details" style="display: none;">
+            <h2 class="title">Bedroom Collection</h2>
+            <div class="collection-grid">
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/df/7d/43/df7d430a546298e2fafadad54c878787.jpg" alt="Queen Bed">
+                    <h4>Modern Queen Bed</h4>
+                    <p class="price">₱35,000.00</p>
+                    <p class="description">Contemporary bed frame with headboard</p>
+                    <button class="add-to-cart" 
+                        onclick="showProductModal(
+                            'Modern Queen Bed',
+                            'Contemporary bed frame with elegant headboard design. Perfect for modern bedrooms.',
+                            [
+                                'https://i.pinimg.com/736x/f9/38/5a/f9385ac97a8773576a9a416ffeb786d5.jpg',
+                                'https://i.pinimg.com/736x/47/74/77/4774774a5115731b8ccc68e07a320ef3.jpg',
+                                'https://i.pinimg.com/736x/e1/e3/dd/e1e3ddbbcfa58c717d49b89d1da5bb85.jpg',
+                                'https://i.pinimg.com/736x/d0/44/b9/d044b955305b0b1fcfba5867f2c56881.jpg'
+                            ],
+                            '₱35,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/8d/83/6d/8d836d66905ece0492c10b2c223925b5.jpg" alt="Wardrobe">
+                    <h4>Modern Wardrobe</h4>
+                    <p class="price">₱28,000.00</p>
+                    <p class="description">Spacious wardrobe with sliding doors</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Modern Wardrobe',
+                            'Spacious wardrobe with sliding doors and multiple compartments.',
+                            [
+                                'https://i.pinimg.com/736x/15/9f/6d/159f6ddbde7954b5e348bf89ab0b26f0.jpg',
+                                'https://i.pinimg.com/736x/14/5f/3a/145f3ae46dd585bdae489ddc98e5a53a.jpg',
+                                'https://i.pinimg.com/736x/16/35/f3/1635f3ffb5f5d2679bb9abd7d6212e62.jpg',
+                                'https://i.pinimg.com/736x/0f/d2/0a/0fd20a269b54068725f3218bc74201e6.jpg'
+                            ],
+                            '₱28,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/19/39/1d/19391d4115e136c906f92ad04c46c995.jpg" alt="Bedside Table">
+                    <h4>Night Stand</h4>
+                    <p class="price">₱8,500.00</p>
+                    <p class="description">Modern bedside table with drawer</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Night Stand',
+                            'Modern bedside table with storage drawer and sleek design.',
+                            [
+                                'https://i.pinimg.com/736x/bb/b6/68/bbb66890ef2e40200d559175d5fc94a9.jpg',
+                                'https://i.pinimg.com/736x/ae/46/09/ae46091d69965b0ee0839c02f2b426f5.jpg',
+                                'https://i.pinimg.com/736x/c4/c0/57/c4c0570dd18e2b6ffc46ae5a0cf7dc54.jpg',
+                                'https://i.pinimg.com/736x/60/84/84/608484d5382ddd082a91800929710d96.jpg'
+                            ],
+                            '₱8,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/0b/82/cf/0b82cf0402bbd62e4cdd337e4c99ce7c.jpg" alt="Storage Ottoman">
+                    <h4>Bedroom Ottoman</h4>
+                    <p class="price">₱6,500.00</p>
+                    <p class="description">Storage ottoman for bedroom</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Bedroom Ottoman',
+                            'Multifunctional storage ottoman perfect for bedroom seating and storage.',
+                            [
+                                'https://i.pinimg.com/736x/9a/e6/06/9ae606ff78460dd33094f1a7b4f536dc.jpg',
+                                'https://i.pinimg.com/736x/e4/a2/7f/e4a27fce996f87713e41ae55d2e12bf3.jpg',
+                                'https://i.pinimg.com/736x/ba/f2/bb/baf2bbd50bc035441ef93d5a781cbe71.jpg',
+                                'https://i.pinimg.com/736x/25/d0/21/25d02141f4d7c2eb385547d323d8ac25.jpg'
+                            ],
+                            '₱6,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/13/73/f4/1373f4d656259b382a1c5bdd4ca37f2a.jpg" alt="Reading Lamp">
+                    <h4>Bedroom Floor Lamp</h4>
+                    <p class="price">₱4,800.00</p>
+                    <p class="description">Modern LED reading lamp</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Bedroom Floor Lamp',
+                            'Adjustable LED floor lamp perfect for bedroom reading corner.',
+                            [
+                                'https://i.pinimg.com/736x/19/dc/ff/19dcffb0537d47fe164ff75d7ed3c2c5.jpg',
+                                'https://i.pinimg.com/736x/6c/94/ad/6c94adcce4f3226f13f719900f70f2b3.jpg',
+                                'https://i.pinimg.com/736x/46/30/12/4630123d86549f754c20f0f7c233feef.jpg',
+                                'https://i.pinimg.com/736x/69/f8/69/69f8698e654aa68936c90aba604f6fe1.jpg'
+                            ],
+                            '₱4,800.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/92/04/77/920477430301ba22f2ae2be265960b4f.jpg" alt="Wall Shelf">
+                    <h4>Floating Wall Shelf</h4>
+                    <p class="price">₱3,500.00</p>
+                    <p class="description">Modern floating wall shelves</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Floating Wall Shelf',
+                            'Modern floating wall shelves for bedroom decor and storage.',
+                            [
+                                'https://i.pinimg.com/736x/b5/c4/e4/b5c4e469ada00495bfaf8686e09fa354.jpg',
+                                'https://i.pinimg.com/736x/6b/ce/1b/6bce1b241580e0af1198364e6a348151.jpg',
+                                'https://i.pinimg.com/736x/26/e3/29/26e329e7cade35c5968763e562057cd0.jpg',
+                                'https://i.pinimg.com/736x/14/5c/d0/145cd03232a3cadf9eadfc54b569d30e.jpg'
+                            ],
+                            '₱3,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/31/64/d9/3164d96d9016013760591183f8e559ac.jpg" alt="Bedroom Bench">
+                    <h4>End of Bed Bench</h4>
+                    <p class="price">₱12,000.00</p>
+                    <p class="description">Upholstered bedroom bench</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'End of Bed Bench',
+                            'Elegant upholstered bench perfect for the foot of your bed.',
+                            [
+                                'https://i.pinimg.com/736x/c9/56/2d/c9562d70c74f70f56b4217bd16f5b276.jpg',
+                                'https://i.pinimg.com/736x/66/25/52/662552a0d8d202f6a5f8dc154d250f26.jpg',
+                                'https://i.pinimg.com/736x/f2/90/80/f29080a3ca717885f908a84a47f05641.jpg',
+                                'https://i.pinimg.com/736x/16/0f/77/160f77907ed6d068f91ad011b5d7886d.jpg'
+                            ],
+                            '₱12,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/d9/70/65/d970651f875214d31e419a5d17a22c05.jpg" alt="Vanity Table">
+                    <h4>Modern Vanity Set</h4>
+                    <p class="price">₱15,000.00</p>
+                    <p class="description">Bedroom vanity with mirror</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Modern Vanity Set',
+                            'Contemporary vanity set with mirror and storage drawers.',
+                            [
+                                'https://i.pinimg.com/736x/ce/8f/6f/ce8f6f20ae446b5d9db389e3a04ef2a2.jpg',
+                                'https://i.pinimg.com/736x/1d/17/ac/1d17acbe2496ebcdc2b710a585395574.jpg',
+                                'https://i.pinimg.com/736x/74/0a/23/740a23ff32a3ce0bdf97c1e04580c393.jpg',
+                                'https://i.pinimg.com/736x/ba/53/99/ba5399ed3ec327a403476874c00d0323.jpg'
+                            ],
+                            '₱15,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/bf/f9/4c/bff94cfdbe5b79bb880f883c4f483460.jpg" alt="Dresser">
+                    <h4>Modern Dresser</h4>
+                    <p class="price">₱22,000.00</p>
+                    <p class="description">Six-drawer bedroom dresser</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Modern Dresser',
+                            'Spacious six-drawer dresser with contemporary design.',
+                            [
+                                'https://i.pinimg.com/736x/7a/b9/7c/7ab97c2fe2e0d0c07747b9edeb3177b8.jpg',
+                                'https://i.pinimg.com/736x/b5/75/a5/b575a508d54e5b4a652dee59ea1cd9d7.jpg',
+                                'https://i.pinimg.com/736x/9f/3d/e4/9f3de4a43e6c3e04f519c2e31beb8a41.jpg',
+                                'https://i.pinimg.com/736x/d4/9c/15/d49c15214e8e961c03ff8557f6276cc3.jpg'
+                            ],
+                            '₱22,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="dining" class="collection-details" style="display: none;">
+            <h2 class="title">Dining Collection</h2>
+            <div class="collection-grid">
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/564x/c6/08/3d/c6083d50572dc7f04c803c0a5f918114.jpg" alt="Dining Set">
+                    <h4>Modern Dining Set</h4>
+                    <p class="price">₱45,000.00</p>
+                    <p class="description">6-seater dining set with glass top</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Modern Dining Set',
+                            '6-seater dining set with tempered glass top and comfortable chairs.',
+                            [
+                                'https://i.pinimg.com/736x/73/01/74/730174d9f8d1c1c4fe2b686b221232db.jpg',
+                                'https://i.pinimg.com/736x/a5/1a/aa/a51aaa0c6b598b30df8b49f45c82a66b.jpg',
+                                'https://i.pinimg.com/736x/cf/6a/ab/cf6aabfef08de0e105172afe5ad51c2e.jpg',
+                                'https://i.pinimg.com/736x/62/24/94/622494698f0458fd62aa2f9de9334fa4.jpg'
+                            ],
+                            '₱45,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/1f/51/1c/1f511cc645d64c5b28d19554bb0324c6.jpg" alt="Buffet Cabinet">
+                    <h4>Dining Buffet Cabinet</h4>
+                    <p class="price">₱32,000.00</p>
+                    <p class="description">Modern buffet cabinet with storage</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Dining Buffet Cabinet',
+                            'Modern buffet cabinet with ample storage space for dining essentials.',
+                            [
+                                'https://i.pinimg.com/736x/83/ca/10/83ca103b12d65bb8275165b00125bd31.jpg',
+                                'https://i.pinimg.com/736x/23/5c/f8/235cf82592e98db629026b23f342c921.jpg',
+                                'https://i.pinimg.com/736x/58/37/f6/5837f67473492aa1a171f6f1c3221f14.jpg',
+                                'https://i.pinimg.com/736x/16/de/9b/16de9bd04d8501a7a2ac000da7b811b6.jpg'
+                            ],
+                            '₱32,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/06/b8/a5/06b8a5300bea2bc9dfd5695e4ba1eb67.jpg" alt="Dining Chairs">
+                    <h4>Modern Dining Chairs</h4>
+                    <p class="price">₱24,000.00</p>
+                    <p class="description">Set of 6 contemporary dining chairs</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Modern Dining Chairs',
+                            'Set of 6 contemporary dining chairs with ergonomic design.',
+                            [
+                                'https://i.pinimg.com/736x/e8/93/f5/e893f5919ff1c75bf3fb5d03cbf9c31c.jpg',
+                                'https://i.pinimg.com/736x/fe/5e/fa/fe5efa3623836277a896c2547d9ebef9.jpg',
+                                'https://i.pinimg.com/736x/d0/4c/a6/d04ca6cac4405c58e88adcc949fc9381.jpg',
+                                'https://i.pinimg.com/736x/14/8e/89/148e8906956f0e8729d4ddb0ee91a403.jpg'
+                            ],
+                            '₱24,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/8a/ef/fb/8aeffb556229c6936cc2fd7d1aecb88f.jpg" alt="Wine Cabinet">
+                    <h4>Wine Cabinet</h4>
+                    <p class="price">₱18,000.00</p>
+                    <p class="description">Modern wine storage cabinet</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Wine Cabinet',
+                            'Modern wine storage cabinet with glass display.',
+                            [
+                                'https://i.pinimg.com/736x/6b/dc/9a/6bdc9a82e6424db0d35e0ab525da4131.jpg',
+                                'https://i.pinimg.com/736x/5b/bc/62/5bbc62a10bf256efc89cd2e4ad041796.jpg',
+                                'https://i.pinimg.com/736x/f7/31/0a/f7310a425583c9e154089ecefe2044d0.jpg',
+                                'https://i.pinimg.com/736x/32/b7/09/32b709d7467fc191feda8ec2540fd190.jpg'
+                            ],
+                            '₱18,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/7f/d9/cf/7fd9cf97d9d8c557db19c06febb59bc3.jpg" alt="Server Table">
+                    <h4>Chandelier</h4>
+                    <p class="price">₱22,000.00</p>
+                    <p class="description">Dining room server table</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Dining Server',
+                            'Contemporary dining room server with storage drawers.',
+                            [
+                                'https://i.pinimg.com/736x/5b/8f/9f/5b8f9f68ab0cce1796d0ae44074c4f6c.jpg',
+                                'https://i.pinimg.com/736x/9a/4c/df/9a4cdfdb150b372a7c4b78ea665ed914.jpg',
+                                'https://i.pinimg.com/736x/51/63/72/5163726a8931f1d3d9a913973d5b3ce0.jpg',
+                                'https://i.pinimg.com/736x/e4/0b/3a/e40b3a1ae02294ee4139cc43c8089644.jpg'
+                            ],
+                            '₱22,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/59/16/5d/59165d1f4709e903f00755148d087f62.jpg" alt="Console Table">
+                    <h4>Dining Console</h4>
+                    <p class="price">₱15,000.00</p>
+                    <p class="description">Modern dining console table</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Dining Console',
+                            'Modern console table perfect for dining room storage.',
+                            [
+                                'https://i.pinimg.com/736x/1f/66/52/1f6652108da19dc22f419be0028700ed.jpg',
+                                'https://i.pinimg.com/736x/9b/1c/fd/9b1cfda2a4155a1e4555e0648c9a57f7.jpg',
+                                'https://i.pinimg.com/736x/6d/ae/65/6dae65be6f11fab7559b4e827ec5b5ad.jpg',
+                                'https://i.pinimg.com/736x/ea/e4/ae/eae4aed52e3a83980e29c5323ad0d4e5.jpg'
+                            ],
+                            '₱15,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/3d/e6/75/3de675d67693da3cf4536cac47f7c759.jpg" alt="Bar Cart">
+                    <h4>Modern Bar Cart</h4>
+                    <p class="price">₱12,000.00</p>
+                    <p class="description">Rolling bar cart with storage</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Modern Bar Cart',
+                            'Contemporary bar cart with wheels and storage space.',
+                            [
+                                'https://i.pinimg.com/736x/5b/a3/bc/5ba3bc9a2596502613c393f9363af777.jpg',
+                                'https://i.pinimg.com/736x/32/b7/09/32b709d7467fc191feda8ec2540fd190.jpg',
+                                'https://i.pinimg.com/736x/ea/6b/f4/ea6bf467b61b52603d905ab477d83dc8.jpg',
+                                'https://i.pinimg.com/736x/de/bc/d2/debcd2270ecdee1e4ce79344495d1780.jpg'
+                            ],
+                            '₱12,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/35/97/91/359791e3d04d86067b43207ecfae65da.jpg" alt="Dining Bench">
+                    <h4>Dining Bench</h4>
+                    <p class="price">₱16,000.00</p>
+                    <p class="description">Modern dining bench seating</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Dining Bench',
+                            'Modern dining bench with upholstered seating.',
+                            [
+                                'https://i.pinimg.com/736x/85/25/a5/8525a521151359f08d6333f1938e0e13.jpg',
+                                'https://i.pinimg.com/736x/27/60/9c/27609c642df31be990eb34e1cf7c5634.jpg',
+                                'https://i.pinimg.com/736x/54/4b/58/544b5876ca85ea719e6b4633282dc572.jpg',
+                                'https://i.pinimg.com/736x/f5/f8/80/f5f880635981b662d282a854d957f289.jpg'
+                            ],
+                            '₱16,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/a9/47/f4/a947f48951b36c25452c91bf60250197.jpg" alt="China Cabinet">
+                    <h4>Display Cabinet</h4>
+                    <p class="price">₱35,000.00</p>
+                    <p class="description">Glass display china cabinet</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Display Cabinet',
+                            'Elegant glass display cabinet for china and collectibles.',
+                            [
+                                'https://i.pinimg.com/736x/e9/74/7c/e9747c6c97a85b19d9028efe95796502.jpg',
+                                'https://i.pinimg.com/736x/8d/ad/c7/8dadc718642f895f12ca5418982c5f96.jpg',
+                                'https://i.pinimg.com/736x/86/db/0b/86db0bbec1c40889d69e852d67653318.jpg',
+                                'https://i.pinimg.com/736x/cd/5a/6e/cd5a6e61fe03868f37b71672add06c44.jpg'
+                            ],
+                            '₱35,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="office" class="collection-details" style="display: none;">
+            <h2 class="title">Office Collection</h2>
+            <div class="collection-grid">
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/2c/fa/16/2cfa16719e2f1b5ffa18fc0fc1f1be82.jpg" alt="Office Desk">
+                    <h4>Executive Desk</h4>
+                    <p class="price">₱18,000.00</p>
+                    <p class="description">Modern office desk with storage</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Executive Desk',
+                            'Modern office desk with built-in storage solutions. Perfect for home office.',
+                            [
+                                'https://i.pinimg.com/736x/dd/e9/d6/dde9d6c4b31f6183b66494a406f44a54.jpg',
+                                'https://i.pinimg.com/736x/8c/46/07/8c4607d6b8313296119e3a7d512991fa.jpg',
+                                'https://i.pinimg.com/736x/2e/26/be/2e26bea33265a7ac623ffb7a4bdcb838.jpg',
+                                'https://i.pinimg.com/736x/ca/42/d2/ca42d2a625b7ac4a922de01cf9e66113.jpg'
+                            ],
+                            '₱18,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/a4/2e/55/a42e55be9b4b8c27edd38d0b873263cb.jpg" alt="Office Chair">
+                    <h4>Ergonomic Office Chair</h4>
+                    <p class="price">₱12,000.00</p>
+                    <p class="description">Comfortable ergonomic office chair</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Ergonomic Office Chair',
+                            'High-quality ergonomic office chair with adjustable features.',
+                            [
+                                'https://i.pinimg.com/736x/ea/05/fc/ea05fcb6de0588c2129ea89bd8e7a53e.jpg',
+                                'https://i.pinimg.com/736x/f1/0d/0a/f10d0a481540a3f79de5d0921db12e3e.jpg',
+                                'https://i.pinimg.com/736x/9a/a2/54/9aa2549a2d581ff1595bc828903fb2fa.jpg',
+                                'https://i.pinimg.com/736x/13/80/88/138088e21307401350bcf456648cd56e.jpg'
+                            ],
+                            '₱12,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/22/91/ac/2291aca00f1f42c9941b208ea73c2c23.jpg" alt="Bookshelf">
+                    <h4>Modern Bookshelf</h4>
+                    <p class="price">₱15,000.00</p>
+                    <p class="description">Contemporary office bookshelf</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Modern Bookshelf',
+                            'Contemporary bookshelf with adjustable shelves.',
+                            [
+                                'https://i.pinimg.com/736x/2a/8c/a9/2a8ca9d655867cfff31e425c3e40a1bd.jpg',
+                                'https://i.pinimg.com/736x/fb/9c/52/fb9c5297b757b5bc0a2f2e5df48d3a01.jpg',
+                                'https://i.pinimg.com/736x/d9/2f/38/d92f38543fccf2ed386b3643c1b54290.jpg',
+                                'https://i.pinimg.com/736x/a9/d8/10/a9d81063f86f75d6a64ab8ac14f45750.jpg'
+                            ],
+                            '₱15,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/f2/ad/43/f2ad436353d468f82f360073a2dfa408.jpg" alt="Filing Cabinet">
+                    <h4>Filing Cabinet</h4>
+                    <p class="price">₱8,500.00</p>
+                    <p class="description">Modern filing cabinet</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Filing Cabinet',
+                            'Modern filing cabinet with lock system.',
+                            [
+                                'https://i.pinimg.com/736x/b4/a7/3c/b4a73c9ed7680f8d7b56952a2a266fd4.jpg',
+                                'https://i.pinimg.com/736x/4e/fa/1a/4efa1adb00698dbd825e0f065fcd77d5.jpg',
+                                'https://i.pinimg.com/736x/aa/d2/f1/aad2f12b5713c9d6c54e904ac965fb2c.jpg',
+                                'https://i.pinimg.com/736x/bf/56/50/bf565011d2dd355efd945df3bb70a013.jpg'
+                            ],
+                            '₱8,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/fb/31/ac/fb31ac203d9ef5612105011026d3b0d2.jpg" alt="Desk Lamp">
+                    <h4>LED Desk Lamp</h4>
+                    <p class="price">₱3,500.00</p>
+                    <p class="description">Adjustable LED desk lamp</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'LED Desk Lamp',
+                            'Modern LED desk lamp with multiple brightness levels.',
+                            [
+                                'https://i.pinimg.com/736x/b6/55/c7/b655c7b752c61cb60f06e50fe42031ef.jpg',
+                                'https://i.pinimg.com/736x/54/17/12/54171258934986985b55d75ba55cc9c1.jpg',
+                                'https://i.pinimg.com/736x/d1/5e/16/d15e16434af540aa433980c4d1b7c6dd.jpg',
+                                'https://i.pinimg.com/736x/b8/ed/1d/b8ed1d54d826ec9691fffbbbb18df0cb.jpg'
+                            ],
+                            '₱3,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/25/b1/60/25b160ebf2fbac6fbe6b32067914a697.jpg" alt="Side Table">
+                    <h4>Office Side Table</h4>
+                    <p class="price">₱6,500.00</p>
+                    <p class="description">Mobile side table</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Office Side Table',
+                            'Mobile side table with storage compartment.',
+                            [
+                                'https://i.pinimg.com/736x/82/76/cf/8276cfc5b4c8b3c7e02348ab9730ea86.jpg',
+                                'https://i.pinimg.com/736x/f9/d8/07/f9d807d5b8019013b55d8c2b17ba296b.jpg',
+                                'https://i.pinimg.com/736x/e0/3f/60/e03f60ce273564d946912b89f1e49eca.jpg',
+                                'https://i.pinimg.com/736x/fe/a4/d7/fea4d7363a5e555c329ef2fbc86e5d13.jpg'
+                            ],
+                            '₱6,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/a6/47/3e/a6473eca755396a44ca28a6e47cc9c0e.jpg" alt="Desk Organizer">
+                    <h4>Desk Organizer Set</h4>
+                    <p class="price">₱2,500.00</p>
+                    <p class="description">Complete desk organizer set</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Desk Organizer Set',
+                            'Complete desk organizer set with multiple compartments.',
+                            [
+                                'https://i.pinimg.com/736x/c7/5b/84/c75b842ecb147de97081336eed56b2f0.jpg',
+                                'https://i.pinimg.com/736x/f6/58/4b/f6584b1cabaee7f97a57134ce6b5b5be.jpg',
+                                'https://i.pinimg.com/736x/ab/a0/9e/aba09ea242ff6a087af38b491d650799.jpg',
+                                'https://i.pinimg.com/736x/08/51/5d/08515d8563a22d0b2d0961b3792162bd.jpg'
+                            ],
+                            '₱2,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/f9/58/47/f95847906ea553ec4ec8c4d498614ab4.jpg" alt="Credenza">
+                    <h4>Office Table</h4>
+                    <p class="price">₱20,000.00</p>
+                    <p class="description">Modern office credenza</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Office Credenza',
+                            'Modern office credenza with file storage.',
+                            [
+                                'https://i.pinimg.com/736x/90/bd/24/90bd24d1613e215633ee4f962062c89a.jpg',
+                                'https://i.pinimg.com/736x/af/91/2c/af912c344c3a49cf9bc6c9f4bfad47a9.jpg',
+                                'https://i.pinimg.com/736x/40/b6/39/40b63901ecef457bd94c9f4dfb45e37.jpg',
+                                'https://i.pinimg.com/736x/16/77/32/167732adb122ad1d63b65df373ee10ea.jpg'
+                            ],
+                            '₱20,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/2d/92/06/2d920668374115d678c86ddec608d6d7.jpg" alt="Conference Chair">
+                    <h4>Conference Chair</h4>
+                    <p class="price">₱8,000.00</p>
+                    <p class="description">Modern conference chair</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Conference Chair',
+                            'Modern conference chair with ergonomic design.',
+                            [
+                                'https://i.pinimg.com/736x/74/90/0e/74900e1e361d78ef38c07a33ccf21f77.jpg',
+                                'https://i.pinimg.com/736x/28/c7/e5/28c7e5a4a85700cfa1c8b236ddd817a0.jpg',
+                                'https://i.pinimg.com/736x/56/dd/b2/56ddb294b8696f9cdf5d88cb1cf60d8b.jpg',
+                                'https://i.pinimg.com/736x/bd/81/ce/bd81ce880343f24db623c20791564650.jpg'
+                            ],
+                            '₱8,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="outdoor" class="collection-details" style="display: none;">
+            <h2 class="title">Outdoor Collection</h2>
+            <div class="collection-grid">
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/564x/85/b5/e5/85b5e5417b9211fb740089f524a33aed.jpg" alt="Patio Set">
+                    <h4>Patio Lounge Set</h4>
+                    <p class="price">₱32,000.00</p>
+                    <p class="description">Weather-resistant outdoor furniture set</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Patio Lounge Set',
+                            'Weather-resistant outdoor furniture set perfect for your patio or garden.',
+                            [
+                                'https://i.pinimg.com/564x/f3/a6/1e/f3a61ee1f7d6daf78611f0976cb962f7.jpg',
+                                'https://i.pinimg.com/564x/91/85/9c/91859c1cac0e813dcdd3861f6534a60c.jpg',
+                                'https://i.pinimg.com/564x/86/fd/b9/86fdb96f8814c7846f384ca025f84b82.jpg',
+                                'https://i.pinimg.com/564x/ce/b4/bd/ceb4bd4301324a6e1e99f3758f6e6e9e.jpg'
+                            ],
+                            '₱32,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/564x/05/1d/47/051d479ba69585ae0a70659d736ed11f.jpg" alt="Garden Bench">
+                    <h4>Garden Bench</h4>
+                    <p class="price">₱15,000.00</p>
+                    <p class="description">Durable outdoor garden bench</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Garden Bench',
+                            'Stylish and durable garden bench perfect for outdoor seating.',
+                            [
+                                'https://i.pinimg.com/736x/7f/86/e7/7f86e759564d930abdc1d670f6d0faef.jpg',
+                                'https://i.pinimg.com/736x/6f/1d/1f/6f1d1fd33f976f4e407cd3506aec0b1f.jpg',
+                                'https://i.pinimg.com/736x/72/19/83/721983b0222b86bf972f507cde2b7ba9.jpg',
+                                'https://i.pinimg.com/736x/9b/94/fd/9b94fdde297047bb759b928a224ec7f1.jpg'
+                            ],
+                            '₱15,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/45/15/51/45155105734844c9bda9905e950506ff.jpg" alt="Outdoor Dining">
+                    <h4>Outdoor Dining Set</h4>
+                    <p class="price">₱45,000.00</p>
+                    <p class="description">6-seater outdoor dining set</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Outdoor Dining Set',
+                            'Weather-resistant 6-seater dining set for outdoor use.',
+                            [
+                                'https://i.pinimg.com/736x/18/60/b0/1860b09710481f548e6eb9d84a3c7028.jpg',
+                                'https://i.pinimg.com/736x/84/4e/f6/844ef6a493c677bda6819ac0bdd8fb0d.jpg',
+                                'https://i.pinimg.com/736x/83/9c/50/839c507221747e4d6ffb6715fcbf9cb9.jpg',
+                                'https://i.pinimg.com/736x/90/f9/50/90f9504d5796be8af404fe27b07e22f8.jpg'
+                            ],
+                            '₱45,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/90/e2/55/90e255dd54738b909c5e8506dbb33c66.jpg" alt="Hammock">
+                    <h4>Garden Hammock</h4>
+                    <p class="price">₱12,000.00</p>
+                    <p class="description">Outdoor hammock with stand</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Garden Hammock',
+                            'Durable outdoor hammock with steel stand.',
+                            [
+                                'https://i.pinimg.com/736x/de/54/54/de5454a14013d04def5307dca3796a50.jpg',
+                                'https://i.pinimg.com/736x/bd/fa/bd/bdfabdf5031ec397af033e9baa3482ce.jpg',
+                                'https://i.pinimg.com/736x/34/f6/c1/34f6c19bb7fce6e36b28bf0fd780d49e.jpg',
+                                'https://i.pinimg.com/736x/be/8c/10/be8c10b137c85966323cdd15ab76462b.jpg'
+                            ],
+                            '₱12,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/69/ce/fa/69cefa98bb3070e87c2427329ebe2bd9.jpg" alt="Side Table">
+                    <h4>Outdoor Side Table</h4>
+                    <p class="price">₱5,500.00</p>
+                    <p class="description">Weather-resistant side table</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Outdoor Side Table',
+                            'Weather-resistant side table for outdoor use.',
+                            [
+                                'https://i.pinimg.com/736x/ee/90/7e/ee907e68d8936b19e9d05326c432b7ed.jpg',
+                                'https://i.pinimg.com/736x/d7/bb/d0/d7bbd04170674c40b4a89d8045254230.jpg',
+                                'https://i.pinimg.com/736x/25/66/6e/25666e7cb1ed192838960ae3595b864f.jpg',
+                                'https://i.pinimg.com/736x/ae/cc/6a/aecc6a0ea8908dae56d7a0d2acd1ab1f.jpg'
+                            ],
+                            '₱5,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/7e/02/45/7e0245d5bcb3b77033e30243fee5683c.jpg" alt="Planter">
+                    <h4>Modern Planter</h4>
+                    <p class="price">₱3,500.00</p>
+                    <p class="description">Contemporary garden planter</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Modern Planter',
+                            'Contemporary garden planter with drainage system.',
+                            [
+                                'https://i.pinimg.com/736x/36/5f/6c/365f6c4679d85a449ec58d1e4687350d.jpg',
+                                'https://i.pinimg.com/736x/71/1b/57/711b57b0d7e002a55e7e387e34a1f648.jpg',
+                                'https://i.pinimg.com/736x/b5/fc/33/b5fc33042cad39c3ed2dc6c1adc952fa.jpg',
+                                'https://i.pinimg.com/736x/84/16/a1/8416a13081ca57174df77f9f3a89ba51.jpg'
+                            ],
+                            '₱3,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/19/5a/bb/195abb72fbf91a9d0229b5f170f1150f.jpg" alt="Storage Box">
+                    <h4>Outdoor Storage Box</h4>
+                    <p class="price">₱8,500.00</p>
+                    <p class="description">Weather-resistant storage box</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Outdoor Storage Box',
+                            'Weather-resistant storage box for outdoor cushions.',
+                            [
+                                'https://i.pinimg.com/736x/26/43/ce/2643cec366fd4d5920199962a3196aac.jpg',
+                                'https://i.pinimg.com/736x/80/f7/40/80f74047daa4c520757724da7095f874.jpg',
+                                'https://i.pinimg.com/736x/64/a6/d2/64a6d29ead56899cc78c8d5840b14894.jpg',
+                                'https://i.pinimg.com/736x/e6/de/6d/e6de6d9d349a19f9ce79d33bfa02f2c7.jpg'
+                            ],
+                            '₱8,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/11/eb/f4/11ebf4b8488b3be6de4fdac6fcc605e6.jpg" alt="Sun Lounger">
+                    <h4>Sun Lounger</h4>
+                    <p class="price">₱15,000.00</p>
+                    <p class="description">Adjustable sun lounger</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Sun Lounger',
+                            'Adjustable sun lounger with weather-resistant cushions.',
+                            [
+                                'https://i.pinimg.com/736x/e3/f9/99/e3f999702ec041eb8b182d525a744e34.jpg',
+                                'https://i.pinimg.com/736x/c8/a8/35/c8a8353ab43ef7daeb321fb3d253b176.jpg',
+                                'https://i.pinimg.com/736x/d3/2f/8a/d32f8ac7a2186a659a294b4dfc9645c0.jpg',
+                                'https://i.pinimg.com/736x/cc/00/9b/cc009bde9b7815888bed1e20f4a6fc6a.jpg'
+                            ],
+                            '₱15,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/f6/84/4d/f6844d5d747d5ce8318874697bff50dc.jpg" alt="Outdoor Lighting">
+                    <h4>Garden Lights Set</h4>
+                    <p class="price">₱6,500.00</p>
+                    <p class="description">Solar-powered garden lights</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Garden Lights Set',
+                            'Solar-powered garden lights set with motion sensors.',
+                            [
+                                'https://i.pinimg.com/736x/1f/57/7f/1f577f8478f420edaab781923e342f25.jpg',
+                                'https://i.pinimg.com/736x/39/fc/67/39fc67c957e9531363c15ebfdaad0f77.jpg',
+                                'https://i.pinimg.com/736x/6a/7c/ad/6a7cad04eac3dd6a08533627c7c5dcf1.jpg',
+                                'https://i.pinimg.com/736x/02/46/dd/0246dd0479e783532e5ec39d5334f974.jpg'
+                            ],
+                            '₱6,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="kitchen" class="collection-details" style="display: none;">
+            <h2 class="title">Kitchen Collection</h2>
+            <div class="collection-grid">
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/61/bb/92/61bb9234ef377482d19c54f832ebc980.jpg" alt="Kitchen Island">
+                    <h4>Modern Kitchen Island</h4>
+                    <p class="price">₱28,000.00</p>
+                    <p class="description">Kitchen island with storage and seating</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Modern Kitchen Island',
+                            'Kitchen island with built-in storage and comfortable seating space.',
+                            [
+                                'https://i.pinimg.com/736x/fc/b4/ac/fcb4ac3b48d2bef8cd2ebe0afe48dc33.jpg',
+                                'https://i.pinimg.com/736x/f2/73/99/f27399e8906f4450555e526a35b0fd23.jpg',
+                                'https://i.pinimg.com/736x/08/20/ac/0820acae62cddef668839002d1cfbb6a.jpg',
+                                'https://i.pinimg.com/736x/9e/82/b1/9e82b18c2c84aff09ed8f292674a74ae.jpg'
+                            ],
+                            '₱28,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/8b/21/37/8b2137284fb70413c21884f14847c2df.jpg" alt="Bar Stools">
+                    <h4>Modern Bar Stools</h4>
+                    <p class="price">₱8,000.00</p>
+                    <p class="description">Set of 2 contemporary bar stools</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Modern Bar Stools',
+                            'Set of 2 contemporary bar stools with comfortable seating.',
+                            [
+                                'https://i.pinimg.com/736x/e9/e9/ac/e9e9ac3f145707ff36b6ee3d0f7cc777.jpg',
+                                'https://i.pinimg.com/736x/7c/87/a7/7c87a747c79210abc2005e0c6dd38709.jpg',
+                                'https://i.pinimg.com/736x/66/bd/a4/66bda4744f294d28179fee6126096c6f.jpg',
+                                'https://i.pinimg.com/736x/c5/82/17/c58217229daef3c9f417e24f0664aebb.jpg'
+                            ],
+                            '₱8,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/06/f6/35/06f635364f7ae8ffa0504169caff3f8d.jpg" alt="Pantry Cabinet">
+                    <h4>Pantry Cabinet</h4>
+                    <p class="price">₱25,000.00</p>
+                    <p class="description">Tall pantry storage cabinet</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Pantry Cabinet',
+                            'Tall pantry cabinet with adjustable shelves.',
+                            [
+                                'https://i.pinimg.com/736x/69/15/4f/69154f0a4ce19f9b9e24b393a4f0a80a.jpg',
+                                'https://i.pinimg.com/736x/c5/2b/39/c52b39d262a484277f785186e055aa21.jpg',
+                                'https://i.pinimg.com/736x/69/be/df/69bedfc8284d879586a4359edb110a84.jpg',
+                                'https://i.pinimg.com/736x/6a/c9/9f/6ac99f153685ba894f17f7c38ecd9e0b.jpg'
+                            ],
+                            '₱25,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/42/c5/36/42c536e7d5e1d0ed2c0d3461e9a5117e.jpg" alt="Kitchen Cart">
+                    <h4>Kitchen Cart</h4>
+                    <p class="price">₱12,000.00</p>
+                    <p class="description">Mobile kitchen cart</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Kitchen Cart',
+                            'Mobile kitchen cart with wine rack.',
+                            [
+                                'https://i.pinimg.com/736x/5b/72/1b/5b721bcf39dd9413b65424a6fed59541.jpg',
+                                'https://i.pinimg.com/736x/02/3d/c4/023dc4549a148a0359dd92522183aa29.jpg',
+                                'https://i.pinimg.com/736x/45/25/91/452591eb0bce4dba30751e3a5a13cffb.jpg',
+                                'https://i.pinimg.com/736x/35/3a/a3/353aa3771a9f82e4ecad3f7cba4cae46.jpg'
+                            ],
+                            '₱12,000.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/a6/17/6c/a6176c02ef092c100013f990dc1bc88b.jpg" alt="Spice Rack">
+                    <h4>Wall Spice Rack</h4>
+                    <p class="price">₱4,500.00</p>
+                    <p class="description">Modern spice organization</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Wall Spice Rack',
+                            'Modern wall-mounted spice rack with shelves.',
+                            [
+                                'https://i.pinimg.com/736x/52/6b/f2/526bf25dd8b7a75677e91c2c4d96edd7.jpg',
+                                'https://i.pinimg.com/736x/22/ae/98/22ae986cb03377be75dc9c010ea28a5f.jpg',
+                                'https://i.pinimg.com/736x/da/05/5a/da055a4337e3c53559a7f7e6b897bf07.jpg',
+                                'https://i.pinimg.com/736x/37/61/69/376169e21571cee777bc5509b539e773.jpg'
+                            ],
+                            '₱4,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/fd/88/be/fd88be060e304f1cad3fdc46fd28c5f0.jpg" alt="Pot Rack">
+                    <h4>Ceiling Pot Rack</h4>
+                    <p class="price">₱8,500.00</p>
+                    <p class="description">Hanging pot organization</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Ceiling Pot Rack',
+                            'Ceiling-mounted pot rack with lighting.',
+                            [
+                                'https://i.pinimg.com/736x/f3/49/89/f349897f3c37f7d8d546a7c88cf5a667.jpg',
+                                'https://i.pinimg.com/736x/42/0d/e5/420de51b8a7da14fcb93bebdeb44b2ce.jpg',
+                                'https://i.pinimg.com/736x/10/fc/05/10fc05a6a3ce2637d3f4808e34c396f0.jpg',
+                                'https://i.pinimg.com/736x/bc/64/73/bc6473433a5490b23918b1c19c4e26cf.jpg'
+                            ],
+                            '₱8,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/9b/98/39/9b9839520b509c9752f1803ac96d29aa.jpg" alt="Corner Shelf">
+                    <h4>Corner Shelf Unit</h4>
+                    <p class="price">₱6,500.00</p>
+                    <p class="description">Space-saving corner storage</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Corner Shelf Unit',
+                            'Space-saving corner shelf unit for kitchen storage.',
+                            [
+                                'https://i.pinimg.com/736x/65/81/7b/65817b7bfd6e66364ac51cfd87beba5d.jpg',
+                                'https://i.pinimg.com/736x/08/ff/18/08ff18e1972580e91253d300b3186aff.jpg',
+                                'https://i.pinimg.com/736x/55/7c/63/557c63d8777184ecc9def5aca895bf09.jpg',
+                                'https://i.pinimg.com/736x/fa/18/29/fa182976e7e82a011bb408aed9a8c4ab.jpg'
+                            ],
+                            '₱6,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/37/14/9f/37149fab3d4e460a1f7d4e12f7793cf7.jpg" alt="Drawer Organizer">
+                    <h4>Drawer Organizer Set</h4>
+                    <p class="price">₱3,500.00</p>
+                    <p class="description">Complete drawer organization</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Drawer Organizer Set',
+                            'Complete drawer organization system for kitchen utensils.',
+                            [
+                                'https://i.pinimg.com/736x/37/14/9f/37149fab3d4e460a1f7d4e12f7793cf7.jpg',
+                                'https://i.pinimg.com/736x/e9/fd/4d/e9fd4d0d221bbcdb811405a0a067c405.jpg',
+                                'https://i.pinimg.com/736x/89/4d/40/894d4022c55ddd01a8b5adb1c29bba65.jpg',
+                                'https://i.pinimg.com/736x/2e/d8/62/2ed862fc72f27ecf96fc7ac887612f9a.jpg'
+                            ],
+                            '₱3,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/1c/ec/c1/1cecc1f4b3aef3f1d6a8ad437debf957.jpg" alt="Under Cabinet Lights">
+                    <h4>Under Cabinet Lighting</h4>
+                    <p class="price">₱5,500.00</p>
+                    <p class="description">LED under cabinet lights</p>
+                    <button class="add-to-cart"
+                        onclick="showProductModal(
+                            'Under Cabinet Lighting',
+                            'LED under cabinet lighting system with remote control.',
+                            [
+                                'https://i.pinimg.com/736x/3e/8c/da/3e8cdad568b2cc5312e84cf5338c40db.jpg',
+                                'https://i.pinimg.com/736x/a5/0b/83/a50b836cd098f35c5d94dd3f0b1585fa.jpg',
+                                'https://i.pinimg.com/736x/82/17/99/82179957a0e55bf0b1ee3992b5ca4b1e.jpg',
+                                'https://i.pinimg.com/736x/8c/6d/7c/8c6d7c17e899c26eaa1822c3b49a1fd9.jpg'
+                            ],
+                            '₱5,500.00'
+                        )"
+                    >Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="product-modal" class="product-modal" style="display:none;">
+        <div class="product-modal-content">
+            <span class="close-modal" onclick="closeProductModal()">&times;</span>
+            <h2 id="modal-product-name"></h2>
+            <div id="modal-product-images" class="modal-images"></div>
+            <p id="modal-product-price" style="font-weight:bold;"></p>
+            <div id="modal-product-description" class="modal-description"></div>
+            <div class="rating-container">
+                <p>Rate this product:</p>
+                <div class="stars">
+                    <i class="fa fa-star-o" data-rating="1"></i>
+                    <i class="fa fa-star-o" data-rating="2"></i>
+                    <i class="fa fa-star-o" data-rating="3"></i>
+                    <i class="fa fa-star-o" data-rating="4"></i>
+                    <i class="fa fa-star-o" data-rating="5"></i>
+                </div>
+                <p id="rating-message"></p>
+            </div>
+
+            <!-- Add comments section -->
+            <div class="comments-section">
+                <h3>Comments</h3>
+                <div class="comment-form">
+                    <textarea id="commentInput" placeholder="Write your comment..."></textarea>
+                    <button onclick="addComment()" class="btn">Post Comment</button>
+                </div>
+                <div class="comments-list" id="commentsList">
+                    <!-- Example comments will be added dynamically -->
+                </div>
+            </div>
+
+            <button class="add-to-cart" onclick="addToCartAndRedirect()">Add to Cart</button>
+        </div>
+    </div>
+    <style>
+    /* Modal styles */
+    .product-modal {
+        position: fixed; z-index: 9999; left: 0; top: 0; width: 100vw; height: 100vh;
+        background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;
+    }
+    .product-modal-content {
+        background: #fff; 
+        padding: 30px; 
+        border-radius: 10px; 
+        max-width: 800px; 
+        width: 90%; 
+        position: relative;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    /* Updated close button styles */
+    .close-modal {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .close-modal:hover {
+        background: #e44d26;
+        color: white;
+        transform: rotate(90deg);
+    }
+
+    .modal-description {
+        max-height: 200px; /* Set a fixed height for description area */
+        overflow-y: auto; /* Enable vertical scrolling for description */
+        padding: 10px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        margin: 10px 0;
+    }
+    .modal-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    .modal-images img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .modal-images img:hover {
+        transform: scale(1.05);
+    }
+    .rating-container {
+        margin: 20px 0;
+        text-align: center;
+    }
+    .stars {
+        display: inline-block;
+        cursor: pointer;
+        margin: 10px 0;
+    }
+    .stars i {
+        color: #ffd700;
+        font-size: 24px;
+        margin: 0 2px;
+    }
+    .fa-star {
+        color: #ffd700;
+    }
+    #rating-message {
+        font-size: 14px;
+        margin-top: 5px;
+        color: var(--primary);
+    }
+
+    /* Comments section styles */
+    .comments-section {
+        margin-top: 20px;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+    }
+
+    .comment-form textarea {
+        width: 100%;
+        min-height: 80px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        resize: vertical;
+    }
+
+    .comments-list .comment {
+        background: #f9f9f9;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+    }
+
+    .comment .user-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .comment .user-info img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .comment .date {
+        color: #888;
+        font-size: 0.9em;
+    }
+
+    /* New styles for product cards */
+    .product-card {
+        background: white;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;  
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    .product-card:hover img {
+        transform: scale(1.05);
+    }
+
+    .product-card h4 {
+        margin: 15px 0 8px;
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    .product-card .price {
+        color: #e44d26;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin: 8px 0;
+    }
+
+    .product-card .description {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .product-card .add-to-cart {
+        background: #333;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        width: 100%;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 0.5px;
+    }
+
+    .product-card .add-to-cart:hover {
+        background: #e44d26;
+        transform: scale(1.02);
+    }
+
+    /* Add a ribbon effect for special items */
+    .product-card::before {
+        content: "New";
+        position: absolute;
+        top: 20px;
+        right: -30px;
+        transform: rotate(45deg);
+        background: rgba(228, 77, 38, 0.85); /* Changed to slightly transparent */
+        color: white;
+        padding: 5px 40px;
+        font-size: 0.9rem; /* Slightly larger */
+        font-weight: 600; /* Made bolder */
+        z-index: 1;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.2); /* Added text shadow for better readability */
+    }
+
+    /* Collection grid layout improvements */
+    .collection-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .modal-images {
+        gap: 20px;
+        margin: 20px 0;
+    }
+
+    .modal-images img {
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+    }
+    </style>
+    <script src="js/cart.js"></script>
+    <script>
+    let selectedProduct = null;
+    function showProductModal(name, desc, images, price) {
+        selectedProduct = { name, desc, images, price };
+        document.getElementById('modal-product-name').textContent = name;
+        document.getElementById('modal-product-description').textContent = desc;
+        document.getElementById('modal-product-price').textContent = price;
+        const imagesDiv = document.getElementById('modal-product-images');
+        imagesDiv.innerHTML = '';
+        images.forEach(src => {
+            const img = document.createElement('img');
+            img.src = src;
+            imagesDiv.appendChild(img);
+        });
+
+        // Add example comments
+        const exampleComments = [
+            {
+                user: "Sarah M.",
+                avatar: "https://i.pravatar.cc/150?img=1",
+                date: "2 days ago",
+                text: "Love this piece! The quality is exceptional and it fits perfectly in my space.",
+                rating: 5
+            },
+            {
+                user: "John D.",
+                avatar: "https://i.pravatar.cc/150?img=2",
+                date: "1 week ago",
+                text: "Great value for money. Exactly what I was looking for.",
+                rating: 4
+            }
+        ];
+
+        const commentsList = document.getElementById('commentsList');
+        commentsList.innerHTML = exampleComments.map(comment => `
+            <div class="comment">
+                <div class="user-info">
+                    <img src="${comment.avatar}" alt="${comment.user}">
+                    <div>
+                        <strong>${comment.user}</strong>
+                        <div class="rating">
+                            ${Array(5).fill('').map((_, i) => 
+                                `<i class="fa fa-star${i < comment.rating ? '' : '-o'}"></i>`
+                            ).join('')}
+                        </div>
+                    </div>
+                </div>
+                <p>${comment.text}</p>
+                <div class="date">${comment.date}</div>
+            </div>
+        `).join('');
+
+        document.getElementById('product-modal').style.display = 'flex';
+    }
+
+    function closeProductModal() {
+        document.getElementById('product-modal').style.display = 'none';
+    }
+
+    function addToCartAndRedirect() {
+        if (selectedProduct) {
+            // Get existing cart items or initialize empty array
+            const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+            
+            // Add new item with status
+            cartItems.push({
+                ...selectedProduct,
+                status: 'Order Pending',
+                orderId: Date.now(), // Unique ID for each order
+                dateAdded: new Date().toLocaleDateString()
+            });
+            
+            // Save back to localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            
+            // Update cart count
+            updateCartCount();
+        }
+        window.location.href = 'cart.html';
+    }
+
+    function updateCartCount() {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems') || '[]');
+        document.querySelector('.cart-count').textContent = cartItems.length;
+    }
+
+    // Fix: Show only the selected collection, hide others, and scroll to it
+    function toggleCollection(collectionId) {
+        // Hide all collections
+        document.querySelectorAll('.collection-details').forEach(col => {
+            col.style.display = 'none';
+        });
+        // Show the selected collection
+        var selected = document.getElementById(collectionId);
+        if (selected) {
+            selected.style.display = 'block';
+            // Scroll to the collection
+            selected.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    // Add this new code after existing script
+    document.querySelector('.stars').addEventListener('click', function(e) {
+        if (e.target.tagName === 'I') {
+            const rating = e.target.dataset.rating;
+            const stars = document.querySelectorAll('.stars i');
+            
+            // Update stars display
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.remove('fa-star-o');
+                    star.classList.add('fa-star');
+                } else {
+                    star.classList.remove('fa-star');
+                    star.classList.add('fa-star-o');
+                }
+            });
+            
+            // Show thank you message
+            document.getElementById('rating-message').textContent = 'Thanks for rating!';
+            
+            // Store rating with product
+            if (selectedProduct) {
+                selectedProduct.rating = rating;
+            }
+        }
+    });
+
+    function addComment() {
+        const commentText = document.getElementById('commentInput').value;
+        if (!commentText.trim()) return;
+
+        const comment = {
+            user: "You",
+            avatar: "https://i.pravatar.cc/150?img=3",
+            date: "Just now",
+            text: commentText,
+            rating: 5 // Default rating for new comments
+        };
+
+        const commentHTML = `
+            <div class="comment">
+                <div class="user-info">
+                    <img src="${comment.avatar}" alt="${comment.user}">
+                    <div>
+                        <strong>${comment.user}</strong>
+                        <div class="rating">
+                            ${Array(5).fill('').map((_, i) => 
+                                `<i class="fa fa-star${i < comment.rating ? '' : '-o'}"></i>`
+                            ).join('')}
+                        </div>
+                    </div>
+                </div>
+                <p>${comment.text}</p>
+                <div class="date">${comment.date}</div>
+            </div>
+        `;
+
+        document.getElementById('commentsList').insertAdjacentHTML('afterbegin', commentHTML);
+        document.getElementById('commentInput').value = '';
+    }
+    </script>
+</body>
+</html>
